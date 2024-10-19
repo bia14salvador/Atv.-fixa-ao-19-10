@@ -1,4 +1,4 @@
-# Atv.-fixa-ao-19-10
+
 # Atividade de Fixação
 
 A atividade de fixação do dia 19 de outubro consiste na escolha de 3 questões e suas respectivas resoluções. Dessa forma, foram escolhidas as questões 10, 20 e 35.
