@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Conversor de Distâncias</title>
+    <script>
+      function converterDistancia() {
+        // Obtém o valor da distância em metros
+        let metros = parseFloat(document.getElementById("distancia").value);
+
+        // Verifica se a entrada é um número
+        if (isNaN(metros)) {
+          document.getElementById("resultado").innerText =
+            "Por favor, insira um número válido.";
+          return;
+        }
+
+        // Converte a distância para outras unidades
+        let quilometros = metros / 1000;
+        let hectometros = metros / 100;
+        let decametros = metros / 10;
+        let centimetros = metros * 100;
+        let decimetros = metros * 10;
+        let milimetros = metros * 1000;
+
+        // Exibe os resultados
+        document.getElementById("resultado").innerHTML =
+          "Quilômetros: " +
+          quilometros.toFixed(3) +
+          " km<br>" +
+          "Hectômetros: " +
+          hectometros.toFixed(3) +
+          " hm<br>" +
+          "Decâmetros: " +
+          decametros.toFixed(3) +
+          " dam<br>" +
+          "Centímetros: " +
+          centimetros.toFixed(3) +
+          " cm<br>" +
+          "Decímetros: " +
+          decimetros.toFixed(3) +
+          " dm<br>" +
+          "Milímetros: " +
+          milimetros.toFixed(3) +
+          " mm";
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Conversor de Distâncias</h1>
+
+    <label for="distancia">Digite a distância em metros:</label>
+    <input type="number" id="distancia" required /><br /><br />
+
+    <button onclick="converterDistancia()">Converter</button>
+
+    <p id="resultado"></p>
+  </body>
+</html>
