@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculadora de Valor de Terreno</title>
+    <script>
+      function calcularValorTerreno() {
+        let comprimento = parseFloat(
+          document.getElementById("comprimento").value
+        );
+        let largura = parseFloat(document.getElementById("largura").value);
+        let area = comprimento * largura;
+        const valordoMetroQuadrado = 300;
+        let valorTotal = area * valordoMetroQuadrado;
+
+        document.getElementById("resultado").innerText =
+          "O valor de mercado do terreno é: R$ " + valorTotal.toFixed(2);
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Calculadora de Valor de Terreno</h1>
+
+    <label for="comprimento"
+      >Informe o comprimento do terreno (em metros):</label
+    >
+    <input type="number" id="comprimento" required /><br /><br />
+
+    <label for="largura">Informe a largura do terreno (em metros):</label>
+    <input type="number" id="largura" required /><br /><br />
+
+    <button onclick="calcularValorTerreno()">Calcular Valor</button>
+
+    <p id="resultado"></p>
+  </body>
