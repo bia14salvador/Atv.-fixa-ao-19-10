@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculadora da Hipotenusa do Triângulo Retângulo</title>
+    <script>
+      function calculandoHipotenusa() {
+        let cateto1 = parseFloat(document.getElementById("cateto1").value);
+        let cateto2 = parseFloat(document.getElementById("cateto2").value);
+        let hipotenusa = Math.sqrt(Math.pow(cateto1, 2) + Math.pow(cateto2, 2));
+
+        document.getElementById("resultado").innerText =
+          "O valor da hipotenusa é: " + hipotenusa.toFixed(1);
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Calculadora da Hipotenusa do Triângulo Retângulo</h1>
+
+    <label for="cateto1">Informe o valor do primeiro cateto:</label>
+    <input type="number" id="cateto1" required /><br /><br />
+
+    <label for="cateto2">Informe o valor do segundo cateto:</label>
+    <input type="number" id="cateto2" required /><br /><br />
+
+    <button onclick="calculandoHipotenusa()">Calcular Hipotenusa</button>
+
+    <p id="resultado"></p>
+  </body>
+</html>
